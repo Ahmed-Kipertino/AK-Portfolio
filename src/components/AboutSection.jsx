@@ -239,7 +239,6 @@ const AboutSection = () => {
                 className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50"
               >
                 <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                  <Lightbulb className="w-5 h-5 text-yellow-500" />
                   En bref
                 </h4>
                 
@@ -353,9 +352,6 @@ const AboutSection = () => {
                 <div className="space-y-8">
                   <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-2xl p-8 border border-gray-200/50 dark:border-gray-700/50">
                     <div className="flex items-center gap-3 mb-8">
-                      <div className="p-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500">
-                        <Brain className="w-6 h-6 text-white" />
-                      </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                           Mes Expertises
@@ -380,7 +376,7 @@ const AboutSection = () => {
                           
                           <div className="relative bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50">
                             <div className="flex items-start justify-between mb-4">
-                              <div className={`p-3 rounded-xl bg-gradient-to-br ${area.color} bg-opacity-10`}>
+                              <div className={`p-3 rounded-xl text-white bg-gradient-to-br ${area.color} bg-opacity-10`}>
                                 {area.icon}
                               </div>
                               <TrendingUp className="w-5 h-5 text-green-500 opacity-0 group-hover:opacity-100 transition-opacity" />

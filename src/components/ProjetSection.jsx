@@ -1,5 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import accueil_loguistud from '../assets/img/captures_ecrans/accueil_loguistud.png'
+import annonces_loguistud from '../assets/img/captures_ecrans/annonces_loguistud.png'
+import choix_loguistud from '../assets/img/captures_ecrans/choix_loguistud.png'
+import details_logement_loguistud from '../assets/img/captures_ecrans/details_logement_loguistud.png'
+import details_logement_suite_loguistud from '../assets/img/captures_ecrans/details_logement_suite_loguistud.png'
+import dashboard_admin_loguistud from '../assets/img/captures_ecrans/dashboard_admin_loguistud.png'
+import dashboard_proprietaire_loguistud from '../assets/img/captures_ecrans/dashboard_proprietaire_loguistud.png'
+
+import accueil_portfolio from '../assets/img/captures_ecrans/portfolio/accueil_portfolio.png'
+import competences_portfolio from '../assets/img/captures_ecrans/portfolio/competences_portfolio.png'
+import expertise from '../assets/img/captures_ecrans/portfolio/expertise.png'
+
+import accueil_irla from '../assets/img/captures_ecrans/irla/accueil_irla.png'
+import actualites_irla from '../assets/img/captures_ecrans/irla/actualites_irla.png'
+import contact_irla from '../assets/img/captures_ecrans/irla/contact_irla.png'
+
+import image_indisponible from '../assets/images_indisponible.jpeg'
+import image_indisponible2 from '../assets/image_indisponible.jpg'
+
 import { 
   ExternalLink, 
   Github, 
@@ -52,7 +71,7 @@ const ProjectsSection = () => {
       liveLink: "#",
       category: "fullstack",
       icon: <Building className="w-5 h-5 md:w-6 md:h-6" />,
-      color: "from-blue-500 to-cyan-500",
+      color: "",
       features: [
         "Authentification JWT sécurisée avec 2FA",
         "Recherche géolocalisée avec filtres avancés",
@@ -62,13 +81,7 @@ const ProjectsSection = () => {
         "Évaluations et commentaires vérifiés",
         "Notifications email et push"
       ],
-      images: [
-        "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1558036117-15e82a2c9a9a?w=800&auto=format&fit=crop"
-      ]
+      images: [accueil_loguistud, choix_loguistud, dashboard_admin_loguistud, annonces_loguistud, details_logement_loguistud, dashboard_proprietaire_loguistud]
     },
     {
       id: 2,
@@ -82,7 +95,7 @@ const ProjectsSection = () => {
       liveLink: "#",
       category: "frontend",
       icon: <Globe className="w-5 h-5 md:w-6 md:h-6" />,
-      color: "from-purple-500 to-pink-500",
+      color: "",
       features: [
         "Design responsive avec mobile-first",
         "Optimisation SEO complète",
@@ -92,71 +105,66 @@ const ProjectsSection = () => {
         "Blog intégré avec système de catégories",
         "Multilangue (Français, Anglais)"
       ],
-      images: [
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&auto=format&fit=crop"
-      ]
+      images: [accueil_irla, actualites_irla, contact_irla]
     },
-    {
-      id: 3,
-      title: "E-Commerce API",
-      subtitle: "Backend e-commerce robuste",
-      description: "API REST complète pour plateforme e-commerce avec microservices.",
-      longDescription: "Architecture microservices scalable pour plateforme e-commerce. Gestion complète des produits, commandes, paiements et notifications. Intégration avec Stripe et PayPal, système de cache Redis, conteneurisation Docker, monitoring avec Prometheus et logs centralisés. API documentée avec Swagger.",
-      technologies: ["Node.js", "Express", "MongoDB", "Redis", "Docker", "Kubernetes", "Stripe", "Jest"],
-      status: "En cours",
-      github: "https://github.com/AhmedKipert/ecommerce-api",
-      liveLink: "#",
-      category: "backend",
-      icon: <ShoppingCart className="w-5 h-5 md:w-6 md:h-6" />,
-      color: "from-green-500 to-emerald-500",
-      features: [
-        "Architecture microservices indépendants",
-        "Paiements Stripe et PayPal intégrés",
-        "Cache Redis pour haute performance",
-        "Conteneurisation Docker et orchestration",
-        "Tests unitaires et d'intégration complets",
-        "Documentation Swagger interactive",
-        "Système de notification en temps réel"
-      ],
-      images: [
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop"
-      ]
-    },
-    {
-      id: 4,
-      title: "TaskFlow Pro",
-      subtitle: "Application de gestion de tâches",
-      description: "Application web de productivité avec IA et automatisations.",
-      longDescription: "Système avancé de gestion de tâches avec intelligence artificielle pour la priorisation automatique. Collaboration en équipe avec permissions granulaire, génération automatique de rapports, intégrations multiples (Slack, Google Calendar, GitHub), et application mobile native. Algorithmes de productivité personnalisés.",
-      technologies: ["React", "Python", "Django", "PostgreSQL", "Celery", "Redis", "React Native", "TensorFlow"],
-      status: "Terminé",
-      github: "https://github.com/AhmedKipert/taskflow",
-      liveLink: "#",
-      category: "fullstack",
-      icon: <Tags className="w-5 h-5 md:w-6 md:h-6" />,
-      color: "from-orange-500 to-red-500",
-      features: [
-        "Priorisation intelligente avec IA",
-        "Collaboration en équipe avec rôles",
-        "Rapports automatiques hebdomadaires",
-        "Intégrations API multiples",
-        "Notifications push et email",
-        "Application mobile native",
-        "Analytics de productivité"
-      ],
-      images: [
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&auto=format&fit=crop"
-      ]
-    },
+    // {
+    //   id: 3,
+    //   title: "E-Commerce API",
+    //   subtitle: "Backend e-commerce robuste",
+    //   description: "API REST complète pour plateforme e-commerce avec microservices.",
+    //   longDescription: "Architecture microservices scalable pour plateforme e-commerce. Gestion complète des produits, commandes, paiements et notifications. Intégration avec Stripe et PayPal, système de cache Redis, conteneurisation Docker, monitoring avec Prometheus et logs centralisés. API documentée avec Swagger.",
+    //   technologies: ["Node.js", "Express", "MongoDB", "Redis", "Docker", "Kubernetes", "Stripe", "Jest"],
+    //   status: "En cours",
+    //   github: "https://github.com/AhmedKipert/ecommerce-api",
+    //   liveLink: "#",
+    //   category: "backend",
+    //   icon: <ShoppingCart className="w-5 h-5 md:w-6 md:h-6" />,
+    //   color: "",
+    //   features: [
+    //     "Architecture microservices indépendants",
+    //     "Paiements Stripe et PayPal intégrés",
+    //     "Cache Redis pour haute performance",
+    //     "Conteneurisation Docker et orchestration",
+    //     "Tests unitaires et d'intégration complets",
+    //     "Documentation Swagger interactive",
+    //     "Système de notification en temps réel"
+    //   ],
+    //   images: [
+    //     "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop",
+    //     "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+    //     "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop",
+    //     "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop"
+    //   ]
+    // },
+    // {
+    //   id: 4,
+    //   title: "TaskFlow Pro",
+    //   subtitle: "Application de gestion de tâches",
+    //   description: "Application web de productivité avec IA et automatisations.",
+    //   longDescription: "Système avancé de gestion de tâches avec intelligence artificielle pour la priorisation automatique. Collaboration en équipe avec permissions granulaire, génération automatique de rapports, intégrations multiples (Slack, Google Calendar, GitHub), et application mobile native. Algorithmes de productivité personnalisés.",
+    //   technologies: ["React", "Python", "Django", "PostgreSQL", "Celery", "Redis", "React Native", "TensorFlow"],
+    //   status: "Terminé",
+    //   github: "https://github.com/AhmedKipert/taskflow",
+    //   liveLink: "#",
+    //   category: "fullstack",
+    //   icon: <Tags className="w-5 h-5 md:w-6 md:h-6" />,
+    //   color: "",
+    //   features: [
+    //     "Priorisation intelligente avec IA",
+    //     "Collaboration en équipe avec rôles",
+    //     "Rapports automatiques hebdomadaires",
+    //     "Intégrations API multiples",
+    //     "Notifications push et email",
+    //     "Application mobile native",
+    //     "Analytics de productivité"
+    //   ],
+    //   images: [
+    //     "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+    //     "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?w=800&auto=format&fit=crop",
+    //     "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+    //     "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&auto=format&fit=crop"
+    //   ]
+    // },
     {
       id: 5,
       title: "SecureAuth API",
@@ -169,7 +177,7 @@ const ProjectsSection = () => {
       liveLink: "#",
       category: "backend",
       icon: <Shield className="w-5 h-5 md:w-6 md:h-6" />,
-      color: "from-indigo-500 to-blue-500",
+      color: "",
       features: [
         "Authentification 2FA et OAuth2",
         "Gestion de rôles RBAC avancée",
@@ -179,11 +187,7 @@ const ProjectsSection = () => {
         "Haute disponibilité",
         "Monitoring de sécurité"
       ],
-      images: [
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop"
-      ]
+      images: [ image_indisponible2, image_indisponible]
     },
     {
       id: 6,
@@ -197,7 +201,7 @@ const ProjectsSection = () => {
       liveLink: "#",
       category: "frontend",
       icon: <Layout className="w-5 h-5 md:w-6 md:h-6" />,
-      color: "from-teal-500 to-cyan-500",
+      color: "",
       features: [
         "Animations Framer Motion avancées",
         "Mode sombre/clair automatique",
@@ -207,12 +211,7 @@ const ProjectsSection = () => {
         "Effets 3D avec Three.js",
         "Blog intégré avec MDX"
       ],
-      images: [
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1558036117-15e82a2c9a9a?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&auto=format&fit=crop"
-      ]
+      images: [accueil_portfolio, expertise, competences_portfolio]
     }
   ];
 
@@ -316,7 +315,7 @@ const ProjectsSection = () => {
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 md:mb-6">
             <span className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 dark:from-gray-100 dark:via-blue-400 dark:to-gray-100 bg-clip-text text-transparent">
-              Mes Projets
+              Mes 3 derniers projets Perso
             </span>
           </h2>
           
@@ -412,7 +411,6 @@ const ProjectsSection = () => {
                   href="#contact"
                   className="group px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg md:rounded-xl font-bold flex items-center gap-3 shadow-lg shadow-blue-500/30 text-sm md:text-base"
                 >
-                  <Rocket className="w-4 h-4 md:w-5 md:h-5 group-hover:rotate-12 transition-transform" />
                   <span>Démarrer un projet</span>
                   <ExternalLink className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
                 </motion.a>
@@ -745,7 +743,7 @@ const ProjectDetailsModal = ({ project, onClose, onViewGallery, isMobile }) => {
               </div>
 
               {/* Liens */}
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg md:rounded-xl p-3 md:p-4 lg:p-6">
+              {/* <div className="bg-gray-50 dark:bg-gray-800 rounded-lg md:rounded-xl p-3 md:p-4 lg:p-6">
                 <h4 className="text-base md:text-lg font-semibold text-gray-900 dark:text-white mb-2 md:mb-3 lg:mb-4">
                   Liens du projet
                 </h4>
@@ -753,6 +751,7 @@ const ProjectDetailsModal = ({ project, onClose, onViewGallery, isMobile }) => {
                   <a
                     href={project.github}
                     target="_blank"
+                    disable={true}
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 md:gap-3 p-2 md:p-3 rounded-lg bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-sm md:text-base"
                   >
@@ -774,12 +773,12 @@ const ProjectDetailsModal = ({ project, onClose, onViewGallery, isMobile }) => {
                     </a>
                   )}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
           {/* Boutons d'action */}
-          <div className="flex flex-col sm:flex-row justify-end gap-2 md:gap-3 lg:gap-4 mt-4 md:mt-6 lg:mt-8 pt-4 md:pt-6 lg:pt-8 border-t border-gray-200 dark:border-gray-700">
+          <div className="flex mb-15 flex-col sm:flex-row justify-end gap-2 md:gap-3 lg:gap-4 mt-4 md:mt-6 lg:mt-8 pt-4 md:pt-6 lg:pt-8 border-t border-gray-200 dark:border-gray-700">
             <button
               onClick={onClose}
               className="px-4 py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 rounded-lg md:rounded-xl font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-sm md:text-base"

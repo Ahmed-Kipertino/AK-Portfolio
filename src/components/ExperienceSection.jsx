@@ -314,7 +314,7 @@ const ExperienceSection = () => {
         </motion.div>
 
         {/* Stats Overview */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -354,7 +354,7 @@ const ExperienceSection = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* Filters */}
         <motion.div
@@ -397,7 +397,7 @@ const ExperienceSection = () => {
           {/* Timeline vertical line */}
           <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-1 ml-8 bg-gradient-to-b from-blue-500/30 via-purple-500/30 to-cyan-500/30" />
 
-          <div className="space-y-8">
+          <div className="space-y-8 text-white">
             {filteredExperiences.map((experience, index) => (
               <ExperienceCard
                 key={experience.id}
@@ -645,7 +645,6 @@ const ExperienceSection = () => {
                 href="#contact"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold flex items-center justify-center gap-3 shadow-lg shadow-blue-500/30"
               >
-                <Briefcase className="w-5 h-5" />
                 <span>Discuter collaboration</span>
                 <ExternalLink className="w-5 h-5" />
               </motion.a>
@@ -833,7 +832,7 @@ const ExperienceCard = ({ experience, index, isExpanded, onToggle }) => {
                   <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
                     Compétences développées
                   </h4>
-                  <div className="flex flex-wrap gap-2">
+                  <div  id="skills" className="flex flex-wrap gap-2">
                     {experience.skills.map((skill, i) => (
                       <span
                         key={i}

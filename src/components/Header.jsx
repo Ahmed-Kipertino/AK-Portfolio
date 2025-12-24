@@ -36,12 +36,12 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { name: "Accueil", href: "#home", icon: "🏠" },
-    { name: "Projets", href: "#projects", icon: "💼" },
-    { name: "Compétences", href: "#skills", icon: "⚡" },
-    { name: "Expérience", href: "#experience", icon: "📈" },
-    { name: "Formations", href: "#education", icon: "🎓" },
-    { name: "Contact", href: "#contact", icon: "📞" },
+    { name: "Accueil", href: "#home"},
+    { name: "Projets", href: "#projects"},
+    { name: "Compétences", href: "#skills"},
+    { name: "Expérience", href: "#experience"},
+    { name: "Formations", href: "#education"},
+    { name: "Contact", href: "#contact"},
   ];
 
   const expertiseIcons = [
@@ -91,7 +91,7 @@ const Header = () => {
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full animate-pulse" />
                   <span className="text-xs sm:text-sm font-bold bg-gradient-to-r from-blue-900 to-blue-600 dark:from-blue-400 dark:to-cyan-300 bg-clip-text text-transparent whitespace-nowrap">
-                    FullStack Junior
+                    FullStack Junior Confirmé
                   </span>
                 </div>
                 
@@ -132,7 +132,6 @@ const Header = () => {
                   className="relative text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium group text-sm lg:text-base"
                 >
                   <div className="flex items-center gap-1.5">
-                    <span className="text-sm">{item.icon}</span>
                     <span>{item.name}</span>
                   </div>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300" />
@@ -140,7 +139,7 @@ const Header = () => {
               ))}
               
               {/* Dark Mode Toggle */}
-              <motion.button
+              {/* <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={toggleDarkMode}
@@ -148,7 +147,7 @@ const Header = () => {
                 aria-label={isDarkMode ? "Passer en mode clair" : "Passer en mode sombre"}
               >
                 <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} className="w-4 h-4" />
-              </motion.button>
+              </motion.button> */}
 
               {/* CTA Contact */}
               <motion.a
@@ -161,7 +160,6 @@ const Header = () => {
                 }}
                 className="px-4 py-2 bg-gradient-to-r from-blue-900 to-blue-700 dark:from-blue-600 dark:to-blue-800 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 flex items-center gap-2"
               >
-                <Mail className="w-4 h-4" />
                 <span className="hidden lg:inline">Contact</span>
                 <span className="lg:hidden">Contacter</span>
               </motion.a>

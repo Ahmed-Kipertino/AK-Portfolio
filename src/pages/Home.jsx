@@ -547,7 +547,7 @@ const Home = () => {
                 <div className="h-20 lg:h-24 flex items-center">
                   <div className="relative">
                     <TextGenerateEffect 
-                      text="Expert en Développement FullStack"
+                      text="Développeur FullStack (MERN)"
                       className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-gray-800 via-gray-900 to-black dark:from-gray-300 dark:via-gray-200 dark:to-white bg-clip-text text-transparent pr-2"
                     />
                     <motion.div
@@ -585,7 +585,6 @@ const Home = () => {
                 
                 <CTAButton 
                   href="#contact" 
-                  variant="secondary" 
                   icon={Mail}
                 >
                   Discutons

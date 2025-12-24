@@ -174,7 +174,7 @@ const EducationSection = () => {
     : allEducations.filter(edu => edu.type === activeFilter);
 
   return (
-    <section id="education" className="relative py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 overflow-hidden">
+    <section id="education" className="relative py-10 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 -left-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl" />
@@ -405,7 +405,6 @@ const EducationSection = () => {
               href="#contact"
               className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold flex items-center gap-3 shadow-lg shadow-blue-500/30"
             >
-              <GraduationCap className="w-5 h-5 group-hover:rotate-12 transition-transform" />
               <span>Discuter formation</span>
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </motion.a>
@@ -455,7 +454,7 @@ const EducationCard = ({ education, index, isExpanded, onToggle }) => {
             <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
               <div className="flex-1">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className={`p-3 rounded-xl bg-gradient-to-br ${education.color} bg-opacity-10`}>
+                  <div className={`p-3 rounded-xl text-white bg-gradient-to-br ${education.color} bg-opacity-10`}>
                     {education.icon}
                   </div>
                   

@@ -145,7 +145,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="relative py-24 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950 overflow-hidden">
+    <section id="contact" className="relative py-10 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Animated gradient orbs */}
